@@ -4,14 +4,14 @@
 
 import { combineReducers } from 'redux';
 
-import globalReducer from '../containers/App/reducers';
+import appReducer from '../containers/App/reducers';
 import homeReducer from '../containers/Home/reducers';
 
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
  */
 const rootReducer = combineReducers({
-  global: globalReducer,
+  app: appReducer,
   home: homeReducer,
 });
 

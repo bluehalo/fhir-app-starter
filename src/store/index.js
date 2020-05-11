@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
 import createSagaMiddleware from 'redux-saga';
 
+import sagas from './sagas';
 import rootReducer from './reducers';
 
 export default function configureStore(initialState = {}, history) {
@@ -41,6 +42,8 @@ export default function configureStore(initialState = {}, history) {
 
   // Extensions
   store.runSaga = sagaMiddleware.run;
+
+  store.runSaga(sagas);
 
   return store;
 }

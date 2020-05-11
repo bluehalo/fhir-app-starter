@@ -20,6 +20,7 @@
       "error",
       { "ignoreComments": true, "tabWidth": 2, "code": 100, "ignoreStrings": true }
     ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "react/prop-types": "off", // Turn this back on when prop types are implemented
     "react/jsx-filename-extension": "off", // Turn this on if we ever rename things to .jsk
     "global-require": "off", // We use this for dynamic config requiring
@@ -34,6 +35,8 @@
     "react/jsx-props-no-spreading": "off",
     "import/no-dynamic-require": "off",
     "no-restricted-globals": "off", // For isNan
-    "import/no-named-as-default": 0
+    "import/no-named-as-default": 0,
+    "default-case": 0,
+    "no-param-reassign": 0
   }
 }

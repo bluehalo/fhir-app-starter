@@ -29,12 +29,8 @@
     "lint:styles": "stylelint 'src/**/*.{js,jsx}'",
     "publish": "node tools/publish",
     "serve": "http-server -p 3000 build",
-    "size": "npm run build && size-limit",
     "start": "node tools/start",
-    "test": "is-ci \"test:coverage\" \"test:watch\"",
-    "test:coverage": "jest --bail --coverage",
-    "test:watch": "jest --watch --verbose",
-    "validate": "npm run lint && npm run lint:styles && npm run test:coverage && flow && npm run build && npm run test:e2e && size-limit"
+    "test": "jest --watch --verbose"
   },
   "lint-staged": {
     "*.(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
@@ -60,6 +56,7 @@
     "connected-react-router": "^6.8.0",
     "core-js": "^3.2.1",
     "events-polyfill": "^2.1.2",
+    "fhirclient": "^2.3.1",
     "history": "^4.10.1",
     "immer": "^4.0.1",
     "mobile-detect": "^1.4.4",

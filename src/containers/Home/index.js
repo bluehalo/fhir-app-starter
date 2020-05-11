@@ -49,7 +49,8 @@ const Home = () => {
       </List>
       Good luck!
       <Message>
-        Made with <Red>&hearts;</Red> by <a href="https://twitter.com/zeevosec">Shane O'Neill</a>
+        Made with <Red>&hearts;</Red> by{' '}
+        <a href="https://twitter.com/zeevosec">Shane O&apos;Neill</a>
       </Message>
     </Grid.Row>
   );
