@@ -1,0 +1,39 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "globalReturn": false
+    },
+    "babelOptions": {
+      "configFile": "./babel.config.js"
+    }
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      { "ignoreComments": true, "tabWidth": 2, "code": 100, "ignoreStrings": true }
+    ],
+    "react/prop-types": "off", // Turn this back on when prop types are implemented
+    "react/jsx-filename-extension": "off", // Turn this on if we ever rename things to .jsk
+    "global-require": "off", // We use this for dynamic config requiring
+    "no-unneeded-ternary": "off", // Ternary is good
+    "class-methods-use-this": "off",
+    "react/jsx-fragments": "off", // Not all environments support this yet
+    "react/destructuring-assignment": "warn",
+    "react/no-unused-state": "warn",
+    "no-nested-ternary": "warn",
+    "react/no-string-refs": "off",
+    "react/no-did-update-set-state": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-dynamic-require": "off",
+    "no-restricted-globals": "off", // For isNan
+    "import/no-named-as-default": 0
+  }
+}
