@@ -1,9 +1,19 @@
 {
-  "name": "React Redux Start",
-  "short_name": "RRS",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
-  "display": "browser",
-  "scope": "/",
-  "start_url": "/"
+  "name": "FHIR App Starter",
+  "short_name": "FHIR App Starter",
+  "icons": [
+    {
+      "src": "/media/meta-icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/media/meta-icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

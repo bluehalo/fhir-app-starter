@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 const path = require('path');
 const webpack = require('webpack');
-const { format } = require('date-fns');
 
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
@@ -314,15 +313,7 @@ module.exports = webpackEnv => {
       ],
     },
     plugins: [
-      new webpack.DefinePlugin({
-        ...env.stringified,
-        APP__BRANCH: JSON.stringify(gitRevPlugin.branch()),
-        APP__BUILD_DATE: JSON.stringify(format(new Date(), 'dd/MM/yyyy')),
-        APP__GITHASH: JSON.stringify(gitRevPlugin.hash()),
-        APP__VERSION: JSON.stringify(NPMPackage.version),
-      }),
       new ModuleNotFoundPlugin(paths.appPath),
-      gitRevPlugin,
       new HtmlPlugin(htmlPluginOptions),
       new InterpolateHtmlPlugin(HtmlPlugin, env.raw),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),

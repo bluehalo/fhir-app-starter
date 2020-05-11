@@ -10,7 +10,6 @@ history.location = {
   state: {},
 };
 
-/* istanbul ignore next */
 history.listen(() => {
   history.location = {
     ...history.location,

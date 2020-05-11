@@ -13,7 +13,7 @@ const Red = styled.span`
 const Home = () => {
   return (
     <Grid.Row>
-      <Header as="h2">Start building your apps right away</Header>
+      <Header as="h2">Start building your FHIR apps right away</Header>
       <p>
         This project was built to reduce the ramp-up time for getting new projects off the ground.
         It is fairly opinionated in that it is comes out of the box with...
