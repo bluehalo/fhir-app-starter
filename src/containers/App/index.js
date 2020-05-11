@@ -5,6 +5,7 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Grid, Container, Header, Divider } from 'semantic-ui-react';
 
+import { getConfig } from './selectors';
 import config from '../../config';
 import history from '../../modules/history';
 import Home from '../Home';
@@ -47,8 +48,7 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  // TODO: replace with selector here
-  return { loaded: !!state.app.config };
+  return { loaded: !!getConfig(state) };
 }
 
 function mapDispatchToProps(dispatch) {
