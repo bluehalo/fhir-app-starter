@@ -9,7 +9,7 @@
 
 import produce from 'immer';
 
-// import constants from './constants';
+import { LOAD_CONFIG_SUCCESS } from './constants';
 
 // The initial state of the App
 export const initialState = {
@@ -19,7 +19,7 @@ export const initialState = {
 const appReducer = (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
-      case 'App/LOAD_CONFIG':
+      case 'App/LOAD_CONFIG_SUCCESS':
         draft.config = action.payload;
         break;
     }

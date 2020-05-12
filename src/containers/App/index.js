@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Grid, Container, Header, Divider } from 'semantic-ui-react';
+import FhirClient from 'fhirclient';
 
 import { getConfig } from './selectors';
 import config from '../../config';
@@ -21,6 +22,13 @@ class App extends React.Component {
     if (!loaded) {
       loadConfig();
     }
+
+    FhirClient.oauth2
+      .ready()
+      .then(client => {
+        console.log(client);
+      })
+      .catch(e => {});
   }
 
   render() {
