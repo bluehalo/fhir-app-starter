@@ -51,7 +51,6 @@ choosePort(HOST, DEFAULT_PORT)
       // We have not found a port.
       return;
     }
-    console.log('thing', paths.appPackageJson);
 
     const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
     const appName = require(paths.appPackageJson).name;
