@@ -12,4 +12,4 @@ const config = {
   redirectUri: '',
 };
 
-export default config;
+module.exports = config;
