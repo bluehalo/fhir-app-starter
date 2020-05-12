@@ -17,6 +17,7 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const config = require('../src/config');
 
 const NPMPackage = require(paths.packageJson);
 const gitRevPlugin = new GitRevPlugin();
@@ -60,6 +61,17 @@ module.exports = webpackEnv => {
     inject: true,
     template: paths.appHtml,
     title: NPMPackage.title,
+  };
+
+  const launchPluginOptions = {
+    githash: GITHASH,
+    inject: true,
+    template: paths.launchHtml,
+    clientId: config.clientId,
+    scope: config.scope,
+    redirectUri: config.redirectUri,
+    iss: config.iss,
+    filename: 'launch.html',
   };
 
   if (isProd) {
@@ -315,7 +327,9 @@ module.exports = webpackEnv => {
     plugins: [
       new ModuleNotFoundPlugin(paths.appPath),
       new HtmlPlugin(htmlPluginOptions),
+      new HtmlPlugin(launchPluginOptions),
       new InterpolateHtmlPlugin(HtmlPlugin, env.raw),
+
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
       isProd &&
         shouldInlineRuntimeChunk &&

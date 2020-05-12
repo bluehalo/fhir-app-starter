@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FHIR App Starter Launch</title>
+    <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // Dev "Open FHIR servers"
+      clientId = <%= JSON.stringify(htmlWebpackPlugin.options.clientId) %>;
+
+      // See http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html for different scopes
+      // sandboxcerner.com does not support wildcard Scoping either!
+      scope = <%= JSON.stringify(htmlWebpackPlugin.options.scope) %>;
+
+      iss = <%= JSON.stringify(htmlWebpackPlugin.options.iss) %>;
+
+      redirectUri = <%= JSON.stringify(htmlWebpackPlugin.options.redirectUri) %>;
+
+      var url = new URL(location.href);
+      if (!url.searchParams.has('launch') || !url.searchParams.has('iss')) {
+        url.searchParams.set('launch', 'eyJhIjoiMSIsImciOiIxIn0');
+        url.searchParams.set('iss', iss);
+        document.body.innerHTML =
+          '<a href="' + url.href + '">Click here to simulate EHR launch</a>';
+      } else {
+        FHIR.oauth2.authorize({
+          // The client_id that you should have obtained after registering a client at
+          // the EHR.
+          clientId: clientId,
+
+          // The scopes that you request from the EHR
+          scope: scope,
+
+          // Typically, if your redirectUri points to the root of the current directory
+          // (where the launchUri is), you can omit this option because the default
+          // value is ".". However, some servers (like this one) do not support directory
+          // indexes so "." and "./" will not automatically map to the "index.html" file
+          // in that directory.
+
+          redirectUri: redirectUri,
+        });
+      }
+    </script>
+  </body>
+</html>

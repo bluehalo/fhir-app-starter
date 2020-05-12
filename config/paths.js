@@ -28,6 +28,7 @@ module.exports = {
   appSrc: resolvePath('src'),
   config: resolvePath('config'),
   dotenv: resolvePath('.env'),
+  launchHtml: resolvePath('assets/launch.html'),
   nodeModules: resolvePath('node_modules'),
   packageJson: resolvePath('package.json'),
   publicPath: resolvePath('/'),

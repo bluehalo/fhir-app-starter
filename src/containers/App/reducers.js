@@ -18,10 +18,8 @@ export const initialState = {
 
 const appReducer = (state = initialState, action) =>
   produce(state, draft => {
-    console.log(action);
     switch (action.type) {
       case 'App/LOAD_CONFIG':
-        console.log('recevied LOAD_CONFIG');
         draft.config = action.payload;
         break;
     }
