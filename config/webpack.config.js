@@ -514,13 +514,13 @@ module.exports = function(webpackEnv) {
 
       // Generate a 'launch.html' from config
       new HtmlWebpackPlugin({
-        template: 'src/launch.html',
+        template: 'public/launch.html',
         config: require('../src/config'),
         filename: 'launch.html',
       }),
 
       new HtmlWebpackPlugin({
-        template: 'src/index.html',
+        template: 'public/index.html',
         config: { buildId: buildId },
         filename: 'index.html',
       }),
