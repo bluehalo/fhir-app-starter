@@ -34,7 +34,7 @@ const postcssNormalize = require('postcss-normalize');
 const appPackageJson = require(paths.appPackageJson);
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.ASCVD_ENV === 'local';
+const shouldUseSourceMap = true;
 
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
@@ -515,14 +515,9 @@ module.exports = function(webpackEnv) {
       // Generate a 'launch.html' from config
       new HtmlWebpackPlugin({
         template: 'public/launch.html',
-        config: require('../src/config'),
         filename: 'launch.html',
-      }),
-
-      new HtmlWebpackPlugin({
-        template: 'public/index.html',
-        config: { buildId: buildId },
-        filename: 'index.html',
+        ...require('../src/config'),
+        buildId,
       }),
 
       // Inlines the webpack runtime script. This script is too small to warrant

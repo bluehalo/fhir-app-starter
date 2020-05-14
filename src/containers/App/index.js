@@ -3,48 +3,33 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Grid, Container, Header, Divider, Message, Icon } from 'semantic-ui-react';
-import FhirClient from 'fhirclient';
+import { Grid, Container, Header, Divider, Message } from 'semantic-ui-react';
 
-import { getConfig } from './selectors';
-import config from '../../config';
+import { loadConfigAction, loadSmartInfoAction } from './actions';
+import { getSmartError, getPatient, getSmartInfo } from './selectors';
 import history from '../../modules/history';
 import Home from '../Home';
+import ErrorMessage from '../../components/ErrorMessage';
+import SuccessMessage from '../../components/SuccessMessage';
 
 const Wrapper = styled.div`
   margin-top: 3rem;
 `;
 
+const Red = styled.span`
+  color: #e25555;
+`;
+
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-
-    FhirClient.oauth2
-      .ready()
-      .then(client => {
-        console.log(client);
-      })
-      .catch(() => {
-        this.setState({
-          error: {
-            header: 'Something went wrong!',
-            body: 'Make sure you are launching from a SMART On FHIR Sandbox',
-          },
-        });
-      });
-  }
-
   componentDidMount() {
-    const { loadConfig, loaded } = this.props;
+    const { loadConfig, initializeSmartClient } = this.props;
 
-    if (!loaded) {
-      loadConfig();
-    }
+    loadConfig();
+    initializeSmartClient();
   }
 
   render() {
-    const { error } = this.state;
+    const { error, smart, patient } = this.props;
     return (
       <Router history={history}>
         <Helmet />
@@ -52,25 +37,23 @@ class App extends React.Component {
           <Container>
             <Grid columns="1" stackable>
               <Grid.Column>
-                {error ? (
-                  <Grid.Row>
-                    <Message icon color="yellow" gutter="5">
-                      <Icon name="exclamation circle" />
-                      <Message.Content>
-                        <Message.Header>{error.header}</Message.Header>
-                        <p>{error.body}</p>
-                      </Message.Content>
-                    </Message>
-                    <Divider hidden />
-                  </Grid.Row>
-                ) : null}
+                {error ? <ErrorMessage {...error} /> : null}
+                {patient ? <SuccessMessage patient={patient} user={smart.user} /> : null}
                 <Grid.Row>
                   <Header as="h1">FHIR App Starter</Header>
                   <Divider />
                 </Grid.Row>
+
                 <Switch>
                   <Route path="/" exact component={Home} />
                 </Switch>
+
+                <Grid.Row>
+                  <Message>
+                    Made with <Red>&hearts;</Red> by{' '}
+                    <a href="https://twitter.com/zeevosec">Shane O&apos;Neill</a>
+                  </Message>
+                </Grid.Row>
               </Grid.Column>
             </Grid>
           </Container>
@@ -81,14 +64,13 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return { loaded: !!getConfig(state) };
+  return { error: getSmartError(state), smart: getSmartInfo(state), patient: getPatient(state) };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    loadConfig: () => {
-      return dispatch({ type: 'App/LOAD_CONFIG', payload: config });
-    },
+    loadConfig: () => dispatch(loadConfigAction()),
+    initializeSmartClient: () => dispatch(loadSmartInfoAction()),
   };
 }
 

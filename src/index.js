@@ -13,8 +13,6 @@ import App from './containers/App';
 
 import 'semantic-ui-css/semantic.min.css';
 
-import './icons';
-
 const store = configureStore({}, history);
 
 ReactDOM.render(
