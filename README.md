@@ -7,7 +7,6 @@ This is a project starter for your next React app. It is focused on Developer Ex
 - React
 - Redux
 - Redux-Saga
-- Font Awesome
 - Semantic-UI
 - Prettier
 
