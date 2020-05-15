@@ -21,7 +21,6 @@ export function* loadConfig() {
 export function* loadSmartInfo() {
   try {
     const client = yield call(FhirClient.connect);
-    console.log(client);
     yield put(addSmartInformationAction(client));
   } catch (e) {
     yield put(addSmartInformationErrorAction(e));
