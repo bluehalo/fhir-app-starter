@@ -1,6 +1,6 @@
-# React-Redux-Starter
+# FHIR App Starter
 
-This is a project starter for your next React app. It is focused on Developer Experience, modern technologies, and best practices.
+This is a project starter for your next FHIR App. It is focused on Developer Experience, modern technologies, and best practices.
 
 ## Features
 
@@ -13,8 +13,8 @@ This is a project starter for your next React app. It is focused on Developer Ex
 ## Getting Started
 
 ```sh
-git clone https://github.com/zeevosec/react-redux-starter
-cd react-redux-starter
+git clone https://github.com/zeevosec/fhir-app-starter
+cd fhir-app-starter
 yarn install
 yarn start
 ```
