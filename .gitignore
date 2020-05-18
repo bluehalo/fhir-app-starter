@@ -7,3 +7,5 @@ dist/
 node_modules/
 reports/
 webpack.stats.json
+.vscode
+.DS_Store
