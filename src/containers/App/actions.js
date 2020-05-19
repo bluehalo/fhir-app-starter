@@ -24,7 +24,7 @@ export const addSmartInformationAction = client => ({
 export const addSmartInformationErrorAction = () => ({
   type: LOAD_SMART_INFO_FAILURE,
   payload: {
-    header: 'Something went wrong!',
+    header: 'Unconnected to a FHIR Server',
     body: 'Make sure you launch from a SMART on FHIR Sandbox',
   },
 });

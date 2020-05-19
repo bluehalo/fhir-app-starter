@@ -47,13 +47,6 @@ class App extends React.Component {
                 <Switch>
                   <Route path="/" exact component={Home} />
                 </Switch>
-
-                <Grid.Row>
-                  <Message>
-                    Made with <Red>&hearts;</Red> by{' '}
-                    <a href="https://twitter.com/zeevosec">Shane O&apos;Neill</a>
-                  </Message>
-                </Grid.Row>
               </Grid.Column>
             </Grid>
           </Container>
