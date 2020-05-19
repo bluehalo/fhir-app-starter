@@ -1,7 +1,7 @@
 {
   "name": "fhir-app-starter",
   "title": "FHIR App Starter",
-  "version": "2020.10.0",
+  "version": "1.0.0",
   "description": "Starter project for Next-gen FHIR Apps",
   "keywords": [
     "FHIR",
@@ -11,26 +11,29 @@
     "Webpack",
     "ES6"
   ],
+  "author": "Asymmetrik Ltd.",
+  "contributors": [
+    "Shane O'Neill <soneill@asymmetrik.com>"
+  ],
   "bugs": "https://github.com/zeevosec/fhir-app-starter/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/zeevosec/fhir-app-starter"
   },
   "license": "MIT",
-  "author": "Shane O'Neill <oneill.shane.h@gmail.com>",
   "scripts": {
     "analyze": "NODE_ENV=production webpack --config config/webpack.config.js --profile --json > webpack.stats.json",
     "build": "node tools/build",
     "build:serve": "npm run build && npm run serve",
     "deploy": "node tools/deploy",
+    "changelog": "conventional-changelog -p angular -s -i CHANGELOG.md",
     "format": "prettier \"**/*.{js,jsx}\" --write",
     "lint": "npm run lint:js && npm run lint:styles",
     "lint:js": "eslint  --ext .js --ext .jsx src",
     "lint:styles": "stylelint 'src/**/*.{js,jsx}'",
     "publish": "node tools/publish",
     "serve": "http-server -p 3000 build",
-    "start": "node tools/start",
-    "test": "jest --watch --verbose"
+    "start": "node tools/start"
   },
   "lint-staged": {
     "*.(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
@@ -82,8 +85,7 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^4.4.0",
-    "styled-minimal": "^0.9.0",
-    "tree-changes": "^0.5.1"
+    "styled-minimal": "^0.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
