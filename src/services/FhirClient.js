@@ -16,6 +16,7 @@ const connect = async () => {
 };
 
 export default {
+  client,
   connect,
   getPatient: () => {
     return connect().then(smart => {
