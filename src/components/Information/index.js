@@ -11,16 +11,16 @@ const Information = () => {
       </p>
       <List as="ul" bulleted>
         <List.Item as="li">
-          <a href="https://reactjs.org/">React</a> (of course)
+          <a href="https://reactjs.org/">React</a>
         </List.Item>
         <List.Item as="li">
-          <a href="https://redux.js.org/">Redux</a> (duh)
+          <a href="https://redux.js.org/">Redux</a>
         </List.Item>
         <List.Item as="li">
-          <a href="https://redux-saga.js.org/">Redux-Saga</a> (for async actions)
+          <a href="https://redux-saga.js.org/">Redux-Saga</a>
         </List.Item>
         <List.Item as="li">
-          <a href="https://semantic-ui.com/">Semantic-UI</a> (because it looks nice)
+          <a href="https://semantic-ui.com/">Semantic-UI</a>
         </List.Item>
       </List>
       <p>This project was inspired by...</p>

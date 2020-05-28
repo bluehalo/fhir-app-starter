@@ -22,7 +22,6 @@ class Home extends React.Component {
         <Grid.Row>
           <Header as="h2">Start building your FHIR apps right away</Header>
           <Information />
-          <p>Good luck!</p>
         </Grid.Row>
         <Grid.Row>
           <Divider />

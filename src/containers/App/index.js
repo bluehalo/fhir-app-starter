@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Grid, Container, Header, Divider, Message } from 'semantic-ui-react';
+import { Grid, Container, Header, Divider } from 'semantic-ui-react';
 
 import { loadConfigAction, loadSmartInfoAction } from './actions';
 import { getSmartError, getPatient, getSmartInfo } from './selectors';
@@ -14,10 +14,6 @@ import SuccessMessage from '../../components/SuccessMessage';
 
 const Wrapper = styled.div`
   margin-top: 3rem;
-`;
-
-const Red = styled.span`
-  color: #e25555;
 `;
 
 class App extends React.Component {
