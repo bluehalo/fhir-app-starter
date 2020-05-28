@@ -1,69 +1,20 @@
-# Contributing
+# 1.0.0 (2020-05-28)
 
-First off, Contributions are always welcome and we appreciate any help you can offer. Please take a moment to read the entire contributors guide.
+### Features
 
-## Before you begin
-
-Below are some general guidelines we try to stick to on all of our FHIR related repositories. When contributing to `@asymmetrik/fhir-app-starter`, we do ask that you do your best to follow these guidelines.
-
-### Branch Organization
-
-We do our best to keep `master` in a stable state. We also started cutting release branches, for example, `release/1.4.0`, to make it easier to contribute to specific versions and maintain older versions. When you submit pull requests, please make sure to fork from and submit back to `master`.
-
-### Semantic Versioning
-
-We try to follow [semantic versioning](https://semver.org/) for this repo as close as we can. If we ever publish breaking changes, there will be something in the release notes. There have been occasionally breaking changes in the past on minor updates, which is something we will not be doing going forwards.
-
-### Conventional Commits
-
-We use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) which helps keep commit messages clean and useful. It also is helpful because we use the changelog cli generator (`yarn changelog`) to automatically generate changelogs when cutting new releases.
-
-### Style Guide
-
-In an attempt to never have a debate about style or tabs versus spaces in a PR, we use [prettier](https://prettier.io/), an opinionated code formatter. We ask everyone to run this before submitting a pull request and have some general configurations defined in our package.json.
-
-## Getting Started
-
-Getting setup is easy, however, this project does require that you have Node.js and preferably yarn installed. You can install the latest LTS for [Node.js here](https://nodejs.org/en/).
-
-### Installation
-
-1. [Fork](https://help.github.com/articles/fork-a-repo/) this repo to your GitHub account and clone it.
-2. Run `yarn install`.
-
-### Development Workflow
-
-After cloning and installing all the dependencies, there are several commands we can use for local development.
-
-- `yarn start` - Starts the Webpack Dev Server
-- `yarn lint` - Lints everything in src directory
-- `yarn format` - Format your code for readability
-
-### Production Workflow
-
-- `yarn build` - Compile a static app to serve.
-- `yarn serve` - Runs a production version. No live reload and NODE_ENV is defaulted to `production`.
-
-## Pull Request Checklist
-
-When submitting a pull request, please make sure you have completed the following otherwise the pull request will not be accepted.
-
-1. Run `yarn format`.
-2. If documentation needs to be added, include a snippet of what should be added and where.
-3. Pull request base branch is set to `master`. All pull requests should be forked from and merged back to `master`.
-
-## Release process
-
-When cutting a release, the following steps need to be performed.
-
-1. `package.json` needs to have a version update based on the content being released, remember semver.
-2. Changelogs should be generated with `yarn changelog`.
-3. Create a release branch with the convention `release/x.x.x`.
-4. Create a tag for the version; naming convention is just the version, so x.x.x.
-5. Push the tag to github.
-6. Publish to npm.
-7. Draft a release in the release tab with release notes. You can copy these from the changelog, but feel free to add any additional information if necessary or if it is missing from the changelogs. Follow previous releases if you are unsure on the format.
-
-## Issues
-
-Please file your issues [here](https://github.com/Asymmetrik/fhir-app-starter/issues) and try to provide as much information in the template as possible/relevant.
+- add new webpack config ([9c9071e](https://github.com/zeevosec/fhir-app-starter/commit/9c9071e777d361bb93c788df36497a5d251a0bb4))
+- add config to redux store ([eccf60e](https://github.com/zeevosec/fhir-app-starter/commit/eccf60e4bd58abe7f1d06e5df13562f4787bc0d0))
+- add error if launched incorrectly ([aea6e19](https://github.com/zeevosec/fhir-app-starter/commit/aea6e1982c96c5703d03041568788684b6f70e48))
+- add launch.html ([2bf930d](https://github.com/zeevosec/fhir-app-starter/commit/2bf930dc316a8173d50a29a9542d9a459a3207b2))
+- add meta icons ([8da7deb](https://github.com/zeevosec/fhir-app-starter/commit/8da7deb5a3d70ebee7d577fbb7ec627cda640b0a))
+- fix starting script ([707c2f1](https://github.com/zeevosec/fhir-app-starter/commit/707c2f10cbb95a21f8b4ae0c519c436179f54556))
+- initial commit ([f900852](https://github.com/zeevosec/fhir-app-starter/commit/f900852a1f70fe0fe7928770aa7d91fce78a6ac3))
+- lots of improvements ([7bf60d1](https://github.com/zeevosec/fhir-app-starter/commit/7bf60d1ff20692425f0b6503552e3a2344a916e0))
+- remove debugging code ([89a1ed5](https://github.com/zeevosec/fhir-app-starter/commit/89a1ed50cc6fd8c76135a9dab9cd9274fd83be4f))
+- remove debugging script ([e5226ee](https://github.com/zeevosec/fhir-app-starter/commit/e5226eedd4580df0603f7ee366ef1239268c5870))
+- update footer ([25d8fb0](https://github.com/zeevosec/fhir-app-starter/commit/25d8fb047b87c3caeec7315b94f1a5e83e4e1eac))
+- update gitignore ([6234971](https://github.com/zeevosec/fhir-app-starter/commit/62349714ec53e3f07ce6dc05b4ed0086e7430c69))
+- update README ([9e82133](https://github.com/zeevosec/fhir-app-starter/commit/9e821334e4a618cc60b57e999bb3562073efb939))
+- Update README ([d7e2eec](https://github.com/zeevosec/fhir-app-starter/commit/d7e2eec0413ba3f6b1a641bd1299fa8342b64118))
+- use module.exports ([4908d5d](https://github.com/zeevosec/fhir-app-starter/commit/4908d5d1cf18c8a77cb548b0d7ced81f6dba3160))
+- use selectors ([b16e89c](https://github.com/zeevosec/fhir-app-starter/commit/b16e89c6097419a8f36ae835ef63189d88b09cdb))
