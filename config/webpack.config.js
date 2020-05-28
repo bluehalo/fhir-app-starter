@@ -488,8 +488,9 @@ module.exports = function(webpackEnv) {
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
-          {},
           {
+            buildId,
+            title: appPackageJson.title,
             inject: true,
             template: paths.appHtml,
           },
@@ -516,7 +517,7 @@ module.exports = function(webpackEnv) {
       new HtmlWebpackPlugin({
         template: 'public/launch.html',
         filename: 'launch.html',
-        ...require('../src/config'),
+        ...require('./smart.js'),
         buildId,
       }),
 
