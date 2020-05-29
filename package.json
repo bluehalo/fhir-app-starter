@@ -33,7 +33,7 @@
     "lint:styles": "stylelint 'src/**/*.{js,jsx}'",
     "publish": "node tools/publish",
     "serve": "http-server -p 3000 build",
-    "start": "node tools/start"
+    "start": "npm run build && node tools/start"
   },
   "lint-staged": {
     "*.(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
