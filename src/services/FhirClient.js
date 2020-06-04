@@ -1,8 +1,7 @@
 import FHIR from 'fhirclient';
 
 let loaded = false;
-
-let client = {};
+let client;
 
 const connect = async () => {
   if (loaded) {
@@ -15,12 +14,4 @@ const connect = async () => {
   });
 };
 
-export default {
-  client,
-  connect,
-  getPatient: () => {
-    return connect().then(smart => {
-      return smart.patient.read();
-    });
-  },
-};
+export default connect;

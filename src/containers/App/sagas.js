@@ -10,7 +10,7 @@ import {
   addSmartInformationErrorAction,
 } from './actions';
 
-import FhirClient from '../../services/FhirClient';
+import connect from '../../services/FhirClient';
 
 import config from '../../config';
 
@@ -20,7 +20,7 @@ export function* loadConfig() {
 
 export function* loadSmartInfo() {
   try {
-    const client = yield call(FhirClient.connect);
+    const client = yield call(connect);
     yield put(addSmartInformationAction(client));
   } catch (e) {
     yield put(addSmartInformationErrorAction(e));
