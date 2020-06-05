@@ -8,7 +8,7 @@ import connect from '../../services/FhirClient';
 import { LOAD_PATIENT_INFO } from './constants';
 import { loadPatientInfoActionError, loadPatientInfoActionSuccess } from './actions';
 
-const fhircall = (client, query) => {
+const wrapper = (client, query) => {
   return client.request(query, { pageLimit: 2, flat: true });
 };
 
@@ -17,16 +17,14 @@ function* loadPatientInfo() {
     const client = yield call(connect);
     const patient = yield call(client.patient.read);
 
-    const { id } = patient;
-
     const conditions = yield call(
-      fhircall,
+      wrapper,
       client,
-      `Condition?patient=${id}&clinicalstatus=active`,
+      `Condition?patient=${patient.id}&clinicalstatus=active`,
     );
 
     yield put(loadPatientInfoActionSuccess(patient));
-    yield put({ type: 'Home/LOAD_CONDITION_INFO_SUCCESS', payload: conditions });
+    yield put({ type: 'Home/LOAD_CONDITION_SUCCESS', payload: conditions });
   } catch (e) {
     yield put(loadPatientInfoActionError(e));
   }

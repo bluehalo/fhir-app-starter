@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Header, Grid, Divider, Table } from 'semantic-ui-react';
+import { Header, Grid, Table } from 'semantic-ui-react';
 
 import { LOAD_PATIENT_INFO } from './constants';
 import { getReady, getConditions, getError } from './selectors';
@@ -16,56 +16,37 @@ class Home extends React.Component {
   }
 
   render() {
-    const { patient, conditions } = this.props;
+    const { conditions } = this.props;
 
-    if (!patient || !conditions) {
-      return <p>Loading...</p>;
+    if (!conditions) {
+      return <p>loading...</p>;
     }
 
     return (
       <React.Fragment>
         <Grid.Row>
-          <Header as="h2">Patient Information</Header>
-          <Divider hidden />
+          <Header as="h2">Conditions</Header>
         </Grid.Row>
         <Grid.Row>
           <Table celled>
-            <Table.Body>
+            <Table.Header>
               <Table.Row>
-                <Table.Cell>Name</Table.Cell>
-                <Table.Cell>
-                  {`${patient.name[0].given[0]} ${patient.name[0].family[0]}`}
-                </Table.Cell>
+                <Table.HeaderCell>Condition</Table.HeaderCell>
+                <Table.HeaderCell>Code</Table.HeaderCell>
               </Table.Row>
-              <Table.Row>
-                <Table.Cell>Conditions</Table.Cell>
-                <Table.Cell>
-                  <Table celled>
-                    <Table.Header>
-                      <Table.Row>
-                        <Table.HeaderCell>Condition</Table.HeaderCell>
-                        <Table.HeaderCell>Code</Table.HeaderCell>
-                      </Table.Row>
-                    </Table.Header>
-                    <Table.Body>
-                      {conditions
-                        .filter(condition => {
-                          return condition.code.coding;
-                        })
-                        .map(condition => {
-                          const coding = condition.code.coding[0];
-                          return (
-                            <Table.Row>
-                              <Table.Cell>{coding.display}</Table.Cell>
-                              <Table.Cell>{coding.code}</Table.Cell>
-                            </Table.Row>
-                          );
-                        })}
-                    </Table.Body>
-                  </Table>
-                </Table.Cell>
-              </Table.Row>
-            </Table.Body>
+              {conditions
+                .filter(condition => {
+                  return condition.code.coding;
+                })
+                .map(condition => {
+                  return (
+                    <Table.Row>
+                      <Table.Cell>{condition.code.coding[0].display}</Table.Cell>
+                      <Table.Cell>{condition.code.coding[0].code}</Table.Cell>
+                    </Table.Row>
+                  );
+                })}
+            </Table.Header>
           </Table>
         </Grid.Row>
       </React.Fragment>
@@ -74,12 +55,7 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return {
-    ready: getReady(state),
-    patient: getPatient(state),
-    conditions: getConditions(state),
-    error: getError(state),
-  };
+  return { ready: getReady(state), patient: getPatient(state), conditions: state.home.conditions };
 };
 
 const mapDispatchToProps = dispatch => {

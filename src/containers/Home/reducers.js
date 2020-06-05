@@ -22,11 +22,11 @@ const appReducer = (state = initialState, action) =>
       case LOAD_PATIENT_INFO_SUCCESS:
         draft.patient = action.payload;
         break;
-      case 'Home/LOAD_CONDITION_INFO_SUCCESS':
+      case 'Home/LOAD_CONDITION_SUCCESS':
         draft.conditions = action.payload;
         break;
       case LOAD_PATIENT_INFO_ERROR:
-        draft.error = { header: 'Something went wrong', body: action.payload.toString() };
+        draft.error = 'Something went wrong';
         break;
     }
   });
