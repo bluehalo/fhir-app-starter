@@ -8,7 +8,7 @@ import { Grid, Container, Header, Divider } from 'semantic-ui-react';
 import { loadConfigAction, loadSmartInfoAction } from './actions';
 import { getSmartError, getPatient, getSmartInfo } from './selectors';
 import history from '../../modules/history';
-import Home from '../../containers/Home';
+import Home from '../Home';
 import ErrorMessage from '../../components/ErrorMessage';
 import SuccessMessage from '../../components/SuccessMessage';
 import Information from '../../components/Information';
@@ -27,9 +27,6 @@ class App extends React.Component {
 
   render() {
     const { error, smart, patient } = this.props;
-    console.log(error);
-    console.log(smart);
-    console.log(patient);
     return (
       <Router history={history}>
         <Helmet />

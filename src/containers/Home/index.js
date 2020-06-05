@@ -19,7 +19,7 @@ class Home extends React.Component {
     const { ready, patient, conditions } = this.props;
 
     if (!patient || !ready || !conditions) {
-      return <p>Loading</p>;
+      return <p>Loading...</p>;
     }
 
     return (
@@ -54,7 +54,6 @@ class Home extends React.Component {
                         })
                         .map(condition => {
                           const coding = condition.code.coding[0];
-                          console.log(coding);
                           return (
                             <Table.Row>
                               <Table.Cell>{coding.display}</Table.Cell>
