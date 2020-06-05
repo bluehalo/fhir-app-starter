@@ -1,3 +1,5 @@
+![Logo](./doc/Logo.png)
+
 # FHIR App Starter
 
 This is a project starter for your next FHIR App. It is focused on Developer Experience, modern technologies, and best practices.
@@ -49,8 +51,8 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
    module.exports = {
      name: '',
      clientId: '', // Your clientId
-     scope: '', // "patient/Patient.read,patient/Observation.read"
-     iss: '', // Found on Cerner's Sandbox under "FHIR Spec: dstu2 - " <iss listed here> "
+     scope: '', // "patient/Patient.read patient/Observation.read" or: Whatever scopes you like
+     iss: '', // Your FHIR Server or: Found on Cerner's Sandbox under "FHIR Spec: dstu2 - " <iss listed here> "
      redirectUri: '', // Your redirectUri
    };
    ```
