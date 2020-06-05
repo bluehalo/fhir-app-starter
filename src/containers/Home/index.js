@@ -9,9 +9,9 @@ import { getReady } from './selectors';
 import { getPatient } from '../App/selectors';
 
 class Home extends React.Component {
-  componentDidUpdate() {
-    const { ready, patient, loadPatient } = this.props;
-    if (ready && !patient) {
+  componentDidMount() {
+    const { error, patient, loadPatient } = this.props;
+    if (!error && !patient) {
       loadPatient();
     }
   }
@@ -20,11 +20,7 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <Grid.Row>
-          <Header as="h2">Start building your FHIR apps right away</Header>
-          <Information />
-        </Grid.Row>
-        <Grid.Row>
-          <Divider />
+          <Header as="h2">Hello from the Home Container</Header>
         </Grid.Row>
       </React.Fragment>
     );

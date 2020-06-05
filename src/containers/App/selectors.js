@@ -8,11 +8,11 @@ import { createSelector } from 'reselect';
 export const getApp = state => state.app;
 
 export const getSmartError = createSelector([getApp], app => {
-  return _.get(app, 'smart.error');
+  return app.error;
 });
 
 export const getSmartInfo = createSelector([getApp], app => {
-  return _.get(app, 'smart');
+  return app.smart;
 });
 
 export const getPatient = state => {

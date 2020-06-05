@@ -11,6 +11,7 @@ import history from '../../modules/history';
 import Home from '../Home';
 import ErrorMessage from '../../components/ErrorMessage';
 import SuccessMessage from '../../components/SuccessMessage';
+import Information from '../../components/Information';
 
 const Wrapper = styled.div`
   margin-top: 3rem;
@@ -26,6 +27,9 @@ class App extends React.Component {
 
   render() {
     const { error, smart, patient } = this.props;
+    console.log(error);
+    console.log(smart);
+    console.log(patient);
     return (
       <Router history={history}>
         <Helmet />
@@ -40,9 +44,19 @@ class App extends React.Component {
                   <Divider />
                 </Grid.Row>
 
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                </Switch>
+                <Grid.Row>
+                  <Information />
+                </Grid.Row>
+
+                <Grid.Row>
+                  <Divider />
+                </Grid.Row>
+
+                {smart ? (
+                  <Switch>
+                    <Route path="/" exact component={Home} />
+                  </Switch>
+                ) : null}
               </Grid.Column>
             </Grid>
           </Container>
