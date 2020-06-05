@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Header, Grid, Divider } from 'semantic-ui-react';
+import { Header, Grid } from 'semantic-ui-react';
 
-import Information from '../../components/Information';
 import { LOAD_PATIENT_INFO } from './constants';
 import { getReady } from './selectors';
 import { getPatient } from '../App/selectors';
