@@ -13,7 +13,6 @@ import { LOAD_CONFIG_SUCCESS, LOAD_SMART_INFO_SUCCESS, LOAD_SMART_INFO_FAILURE }
 
 export const initialState = {
   container: 'App',
-  smart: {},
 };
 
 const appReducer = (state = initialState, action) =>
@@ -26,9 +25,7 @@ const appReducer = (state = initialState, action) =>
         draft.smart = _.get(action.payload, 'state.tokenResponse');
         break;
       case LOAD_SMART_INFO_FAILURE:
-        draft.smart = {
-          error: action.payload,
-        };
+        draft.error = action.payload;
         break;
     }
   });

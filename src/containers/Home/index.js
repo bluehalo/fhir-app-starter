@@ -3,16 +3,14 @@ import { connect } from 'react-redux';
 
 import { Header, Grid, Divider, Table } from 'semantic-ui-react';
 
-import Information from '../../components/Information';
 import { LOAD_PATIENT_INFO } from './constants';
 import { getReady, getConditions, getError } from './selectors';
 import { getPatient } from '../App/selectors';
 
 class Home extends React.Component {
-  componentDidUpdate() {
-    const { ready, patient, error, loadPatient } = this.props;
-    console.log(this.props);
-    if (ready && !patient && !error) {
+  componentDidMount() {
+    const { error, patient, loadPatient } = this.props;
+    if (!error && !patient) {
       loadPatient();
     }
   }
