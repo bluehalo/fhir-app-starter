@@ -16,9 +16,9 @@ class Home extends React.Component {
   }
 
   render() {
-    const { ready, patient, conditions } = this.props;
+    const { patient, conditions } = this.props;
 
-    if (!patient || !ready || !conditions) {
+    if (!patient || !conditions) {
       return <p>Loading...</p>;
     }
 
@@ -43,7 +43,7 @@ class Home extends React.Component {
                   <Table celled>
                     <Table.Header>
                       <Table.Row>
-                        <Table.HeaderCell>Name</Table.HeaderCell>
+                        <Table.HeaderCell>Condition</Table.HeaderCell>
                         <Table.HeaderCell>Code</Table.HeaderCell>
                       </Table.Row>
                     </Table.Header>
