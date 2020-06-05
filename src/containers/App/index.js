@@ -27,9 +27,6 @@ class App extends React.Component {
 
   render() {
     const { error, smart, patient } = this.props;
-    console.log(error);
-    console.log(smart);
-    console.log(patient);
     return (
       <Router history={history}>
         <Helmet />
