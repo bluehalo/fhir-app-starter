@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Header, Grid, Table } from 'semantic-ui-react';
 
 import { LOAD_PATIENT_INFO } from './constants';
-import { getReady, getConditions, getError } from './selectors';
+import { getReady } from './selectors';
 import { getPatient } from '../App/selectors';
 
 class Home extends React.Component {
