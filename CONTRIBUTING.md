@@ -4,7 +4,7 @@ First off, Contributions are always welcome and we appreciate any help you can o
 
 ## Before you begin
 
-Below are some general guidelines we try to stick to on all of our FHIR related repositories. When contributing to `@asymmetrik/fhir-starter-app`, we do ask that you do your best to follow these guidelines.
+Below are some general guidelines we try to stick to on all of our FHIR related repositories. When contributing to `fhir-app-starter`, we do ask that you do your best to follow these guidelines.
 
 ### Branch Organization
 
@@ -53,4 +53,4 @@ When cutting a release, the following steps need to be performed.
 
 ## Issues
 
-Please file your issues [here](https://github.com/Asymmetrik/node-fhir-server-core/issues) and try to provide as much information in the template as possible/relevant.
+Please file your issues [here](https://github.com/Asymmetrik/fhir-app-starter/issues) and try to provide as much information in the template as possible/relevant.
