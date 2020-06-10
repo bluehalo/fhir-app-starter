@@ -16,7 +16,7 @@ export const initialState = {
   container: 'Home',
 };
 
-const appReducer = (state = initialState, action) =>
+const homeReducer = (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
       case LOAD_PATIENT_INFO_SUCCESS:
@@ -30,4 +30,4 @@ const appReducer = (state = initialState, action) =>
     }
   });
 
-export default appReducer;
+export default homeReducer;

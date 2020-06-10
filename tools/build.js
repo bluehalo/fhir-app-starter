@@ -122,7 +122,7 @@ function build(previousFileSizes) {
     console.log();
   }
 
-  console.log('build...');
+  console.log('building...');
 
   const compiler = webpack(config);
   return new Promise((resolve, reject) => {
