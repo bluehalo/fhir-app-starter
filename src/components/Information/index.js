@@ -7,7 +7,7 @@ const Information = () => {
     <React.Fragment>
       <p>
         This project was built to reduce the ramp-up time for getting new projects off the ground.
-        It is fairly opinionated in that it is comes out of the box with...
+        It is fairly opinionated in that it comes out of the box with...
       </p>
       <List as="ul" bulleted>
         <List.Item as="li">
