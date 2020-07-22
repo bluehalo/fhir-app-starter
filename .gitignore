@@ -9,3 +9,4 @@ reports/
 webpack.stats.json
 .vscode
 .DS_Store
+.history

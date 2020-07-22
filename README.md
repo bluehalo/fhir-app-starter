@@ -38,7 +38,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 2. Clone fhir-app-starter
 
    ```sh
-   git clone https://github.com/zeevosec/fhir-app-starter
+   git clone https://github.com/asymmetrik/fhir-app-starter
    cd fhir-app-starter
    ```
 
