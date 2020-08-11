@@ -1,6 +1,6 @@
 {
   "name": "fhir-app-starter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Starter project for Next-gen FHIR Apps",
   "keywords": [
     "FHIR",
