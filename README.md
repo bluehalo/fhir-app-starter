@@ -2,19 +2,29 @@
 
 ![Logo](./docs/Logo.png)
 
-## Start your next FHIR App in seconds. Build it with modern technologies, with a stellar developer experience.
+### Start your next FHIR App in seconds. Build it with modern technologies with a stellar developer experience.
 
 ## Features
 
-- React
-- Redux
-- Redux-Saga
-- Semantic-UI (out of the box)
-- Prettier
+**_React_** --
+
+- React first. Build an App in a framework that is future-proof and performant.
+
+**_Redux_** --
+
+- Redux has proven to be the leader in client state management. Use it to store your FHIR documents.
+
+**_Redux-Saga_** --
+
+- Redux Saga is a great way to make asynchronous calls to FHIR servers.
+
+**_Semantic-UI_** --
+
+- Perhaps the most opinionated decision, Semantic-UI is a stellar CSS Framework and component library for building applications.
 
 ## Getting Started
 
-## Launch from Cerner's Sandbox
+### Launch from Cerner's Sandbox
 
 1. Create an account on [Cerner's Code Sandbox](https://code.cerner.com/developer/smart-on-fhir/apps) and log in.
 
@@ -76,7 +86,7 @@
 
     ![Success](./docs/Success.png)
 
-## Building for production
+### Building for production
 
 Build for production using the following command:
 
@@ -86,7 +96,7 @@ yarn build
 
 Your app will be located in the `build` directory
 
-## Inspiration
+### Inspiration
 
 - react-boilerplate
 - react-redux-saga-boilerplate
