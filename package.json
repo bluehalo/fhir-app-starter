@@ -23,7 +23,7 @@
     "semantic-ui-react": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start && node ./internals/build.js",
+    "start": "node ./internals/build.js && react-scripts start",
     "build": "react-scripts build",
     "build:launch": "node ./internals/build.js",
     "test": "react-scripts test",

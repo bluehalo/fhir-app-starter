@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Header, Grid } from 'semantic-ui-react';
+import { Header, Grid, Icon } from 'semantic-ui-react';
 
 import { LOAD_PATIENT_INFO } from './constants';
 import { getReady } from './selectors';
@@ -19,18 +19,21 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <Grid.Row>
-          <Header as="h2">Hello from the Home Container</Header>
+          <Header as="h2">
+            <Icon name="check" />
+            Build something great
+          </Header>
         </Grid.Row>
       </React.Fragment>
     );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return { ready: getReady(state), patient: getPatient(state) };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     loadPatient: () => {
       dispatch({ type: LOAD_PATIENT_INFO });

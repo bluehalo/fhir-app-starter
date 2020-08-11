@@ -17,7 +17,7 @@ export const initialState = {
 };
 
 const homeReducer = (state = initialState, action) =>
-  produce(state, draft => {
+  produce(state, (draft) => {
     switch (action.type) {
       case LOAD_PATIENT_INFO_SUCCESS:
         draft.patient = action.payload;
@@ -26,6 +26,8 @@ const homeReducer = (state = initialState, action) =>
         draft.patient = {
           error: 'Something went wrong',
         };
+        break;
+      default:
         break;
     }
   });

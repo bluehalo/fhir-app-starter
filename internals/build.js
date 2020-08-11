@@ -8,6 +8,4 @@ const template = fs.readFileSync(path.join(__dirname, 'launch.handlebars'), 'utf
 const templateFunction = Handlebars.compile(template);
 const html = templateFunction(require(path.join(__dirname, '../config.js')));
 
-mkdirp(path.join(__dirname, '../build')).then(() => {
-  fs.writeFileSync(path.join(__dirname, '../build/launch.html'), html);
-});
+fs.writeFileSync(path.join(__dirname, '../public/launch.html'), html);

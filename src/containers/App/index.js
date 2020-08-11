@@ -23,7 +23,7 @@ class App extends React.Component {
     return (
       <Router history={history}>
         <Helmet />
-        <Container>
+        <Container style={{ marginTop: '2rem' }}>
           <Grid columns="1" stackable>
             <Grid.Column>
               {error ? <ErrorMessage {...error} /> : null}

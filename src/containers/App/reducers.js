@@ -24,6 +24,8 @@ const appReducer = (state = initialState, action) =>
       case LOAD_SMART_INFO_FAILURE:
         draft.error = action.payload;
         break;
+      default:
+        break;
     }
   });
 

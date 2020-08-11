@@ -11,6 +11,7 @@ import configureStore from './store/index';
 import App from './containers/App';
 
 import 'semantic-ui-css/semantic.min.css';
+import './styles.css';
 
 const store = configureStore({});
 
