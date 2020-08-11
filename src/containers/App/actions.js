@@ -2,21 +2,11 @@
  * @module Actions/App
  * @desc App Actions
  */
-import {
-  LOAD_CONFIG,
-  LOAD_SMART_INFO,
-  LOAD_SMART_INFO_SUCCESS,
-  LOAD_SMART_INFO_FAILURE,
-  LOAD_CONFIG_SUCCESS,
-} from './constants';
-
-export const loadConfigAction = () => ({ type: LOAD_CONFIG });
+import { LOAD_SMART_INFO, LOAD_SMART_INFO_SUCCESS, LOAD_SMART_INFO_FAILURE } from './constants';
 
 export const loadSmartInfoAction = () => ({ type: LOAD_SMART_INFO });
 
-export const addConfigAction = config => ({ type: LOAD_CONFIG_SUCCESS, payload: config });
-
-export const addSmartInformationAction = client => ({
+export const addSmartInformationAction = (client) => ({
   type: LOAD_SMART_INFO_SUCCESS,
   payload: client,
 });

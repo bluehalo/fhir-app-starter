@@ -9,18 +9,15 @@
 import produce from 'immer';
 import _ from 'lodash';
 
-import { LOAD_CONFIG_SUCCESS, LOAD_SMART_INFO_SUCCESS, LOAD_SMART_INFO_FAILURE } from './constants';
+import { LOAD_SMART_INFO_SUCCESS, LOAD_SMART_INFO_FAILURE } from './constants';
 
 export const initialState = {
   container: 'App',
 };
 
 const appReducer = (state = initialState, action) =>
-  produce(state, draft => {
+  produce(state, (draft) => {
     switch (action.type) {
-      case LOAD_CONFIG_SUCCESS:
-        draft.config = action.payload;
-        break;
       case LOAD_SMART_INFO_SUCCESS:
         draft.smart = _.get(action.payload, 'state.tokenResponse');
         break;

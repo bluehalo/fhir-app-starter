@@ -7,13 +7,12 @@ import { Provider } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
 
 import configureStore from './store/index';
-import history from './modules/history';
 
 import App from './containers/App';
 
 import 'semantic-ui-css/semantic.min.css';
 
-const store = configureStore({}, history);
+const store = configureStore({});
 
 ReactDOM.render(
   <Provider store={store}>

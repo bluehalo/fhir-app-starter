@@ -3,20 +3,10 @@
  */
 
 import { put, all, call, takeEvery } from 'redux-saga/effects';
-import { LOAD_CONFIG, LOAD_SMART_INFO } from './constants';
-import {
-  addConfigAction,
-  addSmartInformationAction,
-  addSmartInformationErrorAction,
-} from './actions';
+import { LOAD_SMART_INFO } from './constants';
+import { addSmartInformationAction, addSmartInformationErrorAction } from './actions';
 
 import connect from '../../services/FhirClient';
-
-import config from '../../config';
-
-export function* loadConfig() {
-  yield put(addConfigAction(config));
-}
 
 export function* loadSmartInfo() {
   try {
@@ -28,5 +18,5 @@ export function* loadSmartInfo() {
 }
 
 export default function* root() {
-  yield all([takeEvery(LOAD_CONFIG, loadConfig), takeEvery(LOAD_SMART_INFO, loadSmartInfo)]);
+  yield all([takeEvery(LOAD_SMART_INFO, loadSmartInfo)]);
 }
