@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
-const mkdirp = require('mkdirp');
-const { exit } = require('process');
 
 const template = fs.readFileSync(path.join(__dirname, 'launch.handlebars'), 'utf-8');
 const templateFunction = Handlebars.compile(template);
