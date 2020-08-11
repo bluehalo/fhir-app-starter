@@ -2,9 +2,7 @@
 
 ![Logo](./docs/Logo.png)
 
-# FHIR App Starter
-
-This is a project starter for your next FHIR App. It is focused on Developer Experience, modern technologies, and best practices.
+## Start your next FHIR App in seconds. Build it with modern technologies, with a stellar developer experience.
 
 ## Features
 
