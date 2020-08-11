@@ -1,3 +1,5 @@
+![Travis](https://travis-ci.org/Asymmetrik/fhir-app-starter.svg?branch=master)
+
 ![Logo](./docs/Logo.png)
 
 # FHIR App Starter
@@ -9,7 +11,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 - React
 - Redux
 - Redux-Saga
-- Semantic-UI out of the box
+- Semantic-UI (out of the box)
 - Prettier
 
 ## Getting Started
@@ -76,7 +78,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 
     ![Success](./docs/Success.png)
 
-## Build for production
+## Building for production
 
 Build for production using the following command:
 
