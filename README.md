@@ -1,4 +1,4 @@
-![Logo](./doc/Logo.png)
+![Logo](./docs/Logo.png)
 
 # FHIR App Starter
 
@@ -9,7 +9,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 - React
 - Redux
 - Redux-Saga
-- Semantic-UI
+- Semantic-UI out of the box
 - Prettier
 
 ## Getting Started
@@ -20,7 +20,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 
 2. Create an application by clicking New App
 
-   ![NewApp](./doc/NewApp.png)
+   ![NewApp](./docs/NewApp.png)
 
    If you are just developing locally, use the following:
 
@@ -67,7 +67,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 
     You should see your browser open up your app.
 
-    ![Unconnected](./doc/Unconnected.png)
+    ![Unconnected](./docs/Unconnected.png)
 
     Notice the "Unconnected..." banner. This is because we have not launched from an EHR yet. Cerner's Code Sandbox allows us to launch the application in this exact way. Let's do that.
 
@@ -75,7 +75,7 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 
     On [Cerner's Code Sandbox](https://code.cerner.com/developer/smart-on-fhir/apps), click into your application. Select Begin Testing. Select a Patient, and Select Launch. After launching you may be redirected to a login page. Use username **portal** and password **portal**. If you configured things correctly, you should see your application has been launched properly.
 
-    ![Success](./doc/Success.png)
+    ![Success](./docs/Success.png)
 
 ## Inspiration
 

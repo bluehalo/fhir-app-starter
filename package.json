@@ -23,8 +23,8 @@
     "semantic-ui-react": "^1.1.1"
   },
   "scripts": {
-    "start": "node ./internals/build.js && react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn build:launch && react-scripts start",
+    "build": "yarn build:launch && react-scripts build",
     "build:launch": "node ./internals/build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
