@@ -50,7 +50,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint  --ext .js --ext .jsx src",
-    "format": "prettier \"**/*.{js,jsx}\" --write"
+    "format": "prettier \"**/*.{js,jsx}\" --write",
+    "changelog": "conventional-changelog -p angular -s -i CHANGELOG.md"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -68,6 +69,8 @@
     ]
   },
   "devDependencies": {
+    "conventional-changelog": "^3.1.21",
+    "conventional-changelog-cli": "^2.0.34",
     "handlebars": "^4.7.6",
     "prettier": "^2.0.5"
   }
