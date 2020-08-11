@@ -6,7 +6,7 @@
 // import { initialState } from './reducers';
 import _ from 'lodash';
 
-export const getReady = state => {
+export const getReady = (state) => {
   return _.get(state, 'app.smart.user');
 };
 

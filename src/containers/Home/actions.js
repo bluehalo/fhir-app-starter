@@ -9,12 +9,12 @@ export const loadPatientInfoAction = () => ({
   type: LOAD_PATIENT_INFO,
 });
 
-export const loadPatientInfoActionSuccess = patient => ({
+export const loadPatientInfoActionSuccess = (patient) => ({
   type: LOAD_PATIENT_INFO_SUCCESS,
   payload: patient,
 });
 
-export const loadPatientInfoActionError = e => ({
+export const loadPatientInfoActionError = (e) => ({
   type: LOAD_PATIENT_INFO_ERROR,
   payload: e,
 });

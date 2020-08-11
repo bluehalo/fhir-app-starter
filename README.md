@@ -44,12 +44,11 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
 
 3. Update your app config
 
-   The app builds the information into the application automatically. All you need to do is update the `config/smart.js` file.
+   The app builds the information into the application automatically. All you need to do is update your `config.js`.
 
    ```js
    // Update me!
    module.exports = {
-     name: '',
      clientId: '', // Your clientId
      scope: '', // "patient/Patient.read patient/Observation.read" or: Whatever scopes you like
      iss: '', // Your FHIR Server or: Found on Cerner's Sandbox under "FHIR Spec: dstu2 - " <iss listed here> "
@@ -76,6 +75,16 @@ This is a project starter for your next FHIR App. It is focused on Developer Exp
     On [Cerner's Code Sandbox](https://code.cerner.com/developer/smart-on-fhir/apps), click into your application. Select Begin Testing. Select a Patient, and Select Launch. After launching you may be redirected to a login page. Use username **portal** and password **portal**. If you configured things correctly, you should see your application has been launched properly.
 
     ![Success](./docs/Success.png)
+
+## Build for production
+
+Build for production using the following command:
+
+```sh
+yarn build
+```
+
+Your app will be located in the `build` directory
 
 ## Inspiration
 

@@ -7,7 +7,7 @@ const connect = async () => {
   if (loaded) {
     return client;
   }
-  return FHIR.oauth2.ready().then(smart => {
+  return FHIR.oauth2.ready().then((smart) => {
     loaded = true;
     client = smart;
     return client;

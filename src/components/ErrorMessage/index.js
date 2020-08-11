@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Grid, Message, Divider, Icon } from 'semantic-ui-react';
 
-const ErrorMessage = props => {
+const ErrorMessage = (props) => {
   const { header, body } = props;
   return (
     <Grid.Row>
