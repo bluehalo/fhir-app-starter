@@ -1,10 +1,15 @@
-![Logo](./docs/Logo.png)
-
 <p align="center">
-  <img src="https://travis-ci.org/Asymmetrik/fhir-app-starter.svg?branch=master" />
-</p>
+   <img src="./docs/Logo.png" alt="Logo" align="center" />
+ </p>
+ 
+<p align="center">
+   <img src="https://travis-ci.org/Asymmetrik/fhir-app-starter.svg?branch=master" alt="Travis" align="center" />
+ </p>
 
-### Start your next FHIR App in seconds. Build it with modern technologies with a stellar developer experience.
+<br />
+
+<h2 align="center"><strong>FHIR App Starter</strong></h2>
+<h3 align="center">Start building your next FHIR App in seconds. Develop it with modern technologies and a stellar developer experience.</h3>
 
 ## Features
 
@@ -22,7 +27,7 @@
 
 **_Semantic-UI_** --
 
-- Perhaps the most opinionated decision, Semantic-UI is a stellar CSS Framework and component library for building applications.
+- Perhaps the most opinionated decision, Semantic-UI is an excellent CSS Framework and component library for building applications.
 
 ## Getting Started
 
