@@ -1,6 +1,8 @@
-![Travis](https://travis-ci.org/Asymmetrik/fhir-app-starter.svg?branch=master)
-
 ![Logo](./docs/Logo.png)
+
+<p align="center">
+  <img src="https://travis-ci.org/Asymmetrik/fhir-app-starter.svg?branch=master" />
+</p>
 
 ### Start your next FHIR App in seconds. Build it with modern technologies with a stellar developer experience.
 
