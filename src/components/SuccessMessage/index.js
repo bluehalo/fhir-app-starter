@@ -9,7 +9,7 @@ const SuccessMessage = (props) => {
       <Message icon color="green">
         <Icon name="check circle" />
         <Message.Content>
-          <Message.Header>You have launched this app successfully!</Message.Header>
+          <Message.Header>Launch successful!</Message.Header>
           <List>
             <List.Item>Patient: {patient.id}</List.Item>
             <List.Item>User: {user}</List.Item>
