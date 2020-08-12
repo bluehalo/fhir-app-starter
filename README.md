@@ -6,8 +6,6 @@
    <img src="https://travis-ci.org/Asymmetrik/fhir-app-starter.svg?branch=master" alt="Travis" align="center" />
  </p>
 
-<br />
-
 <h2 align="center"><strong>FHIR App Starter</strong></h2>
 <h3 align="center">Start building your next FHIR App in seconds. Develop it with modern technologies and a stellar developer experience.</h3>
 
@@ -28,6 +26,10 @@
 **_Semantic-UI_** --
 
 - Perhaps the most opinionated decision, Semantic-UI is an excellent CSS Framework and component library for building applications.
+
+## Deploy Now
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Asymmetrik/fhir-app-starter)
 
 ## Getting Started
 
