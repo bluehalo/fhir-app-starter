@@ -27,6 +27,10 @@
 
 - Perhaps the most opinionated decision, Semantic-UI is an excellent CSS Framework and component library for building applications.
 
+**_Production Ready_** --
+
+- This project has a scalable component structure utilizing a Container pattern that is ready for Production out of the box.
+
 ## Deploy Now
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Asymmetrik/fhir-app-starter)
